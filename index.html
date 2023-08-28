@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="main.js"></script>
     <title>Form validation project</title>
 </head>
 <body>
     <form>
         <label for="country">Country:</label>
-        <select name="country" id="country">
+        <select id="country">
             <option value="arg">Argentina</option>
             <option value="br">Brasil</option>
             <option value="dk">Denmark</option>
         </select>
         <label for="zip-code">Zip code:</label>
-        <input type="text" id="zip-code" name="zip-code">
+        <input type="text" id="zip-code">
         <label for="email">Email:</label>
         <input type="text" id="email" name="email">
         <label for="password">Password:</label>
         <input type="text" id="password" name="password">
         <label for="comfirm-password">Comfirm Password:</label>
         <input type="text" id="comfirm-password" name="comfirm-password">
-        <input type="button" value="Submit">
+        <input type="submit" value="Submit"/>
     </form>
 </body>
 </html>
