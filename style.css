@@ -27,3 +27,21 @@ form {
     border-radius: 5%;
     cursor: pointer;
 }
+
+#zip-code:valid,
+#email:valid,
+#password:valid,
+#comfirm-password:valid {
+    background-color: rgba(69, 251, 72, 0.353);
+    border: 1px solid rgb(69, 251, 72);
+    outline: solid 1px rgb(5, 250, 9);
+}
+
+#zip-code:invalid,
+#email:invalid,
+#password:invalid,
+#comfirm-password:invalid {
+    background-color: rgba(251, 69, 69, 0.353);
+    border: 1px solid rgb(251, 69, 69);
+    outline: solid 1px rgb(246, 9, 9);
+}
