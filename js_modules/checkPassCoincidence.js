@@ -6,7 +6,7 @@ const CHECK_PASS_COINCIDENCE = () => {
    const COMFIRM_PASSWORD_FIELD = document.getElementById("comfirm-password");
    const COMFIRM_PASSWORD_VALUE = COMFIRM_PASSWORD_FIELD.value;
 
-   if (PASSWORD_VALUE === COMFIRM_PASSWORD_VALUE) {
+   if (PASSWORD_VALUE === COMFIRM_PASSWORD_VALUE && COMFIRM_PASSWORD_VALUE !== "") {
       COMFIRM_PASSWORD_FIELD.setCustomValidity("");
    } else {
       COMFIRM_PASSWORD_FIELD.setCustomValidity(CONSTRAINTS.password[2]);
