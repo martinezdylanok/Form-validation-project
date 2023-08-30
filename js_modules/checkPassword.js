@@ -4,7 +4,7 @@ const CHECK_PASSWORD = () => {
    const PASSWORD_FIELD = document.getElementById("password");
    const PASSWORD_VALUE = PASSWORD_FIELD.value;
 
-   const CONSTRAINT = new RegExp(CONSTRAINTS.password[0], "");
+   const CONSTRAINT = new RegExp(CONSTRAINTS.password[0]);
    if (CONSTRAINT.test(PASSWORD_VALUE)) {
       PASSWORD_FIELD.setCustomValidity("");
    } else {

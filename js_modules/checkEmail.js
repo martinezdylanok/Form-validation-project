@@ -4,7 +4,7 @@ const CHECK_EMAIL = () => {
    const EMAIL_FIELD = document.getElementById("email");
    const EMAIL_VALUE = EMAIL_FIELD.value;
 
-   const CONSTRAINT = new RegExp(CONSTRAINTS.email[0], "");
+   const CONSTRAINT = new RegExp(CONSTRAINTS.email[0]);
    if (CONSTRAINT.test(EMAIL_VALUE)) {
       EMAIL_FIELD.setCustomValidity("");
    } else {
