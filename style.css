@@ -12,7 +12,7 @@ form {
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    margin: 300px 0;
+    margin: 280px 0;
     padding: 20px 75px;
     border: none;
     border-radius: 5%;
@@ -28,10 +28,20 @@ form {
     cursor: pointer;
 }
 
+#submit-message {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 680px;
+    left: 720px;
+    color: red;
+    font-size: .9rem;
+}
+
 #zip-code:valid,
 #email:valid,
 #password:valid,
-#comfirm-password:valid {
+#confirm-password:valid {
     background-color: rgba(69, 251, 72, 0.353);
     border: 1px solid rgb(69, 251, 72);
     outline: solid 1px rgb(5, 250, 9);
@@ -40,7 +50,7 @@ form {
 #zip-code:invalid,
 #email:invalid,
 #password:invalid,
-#comfirm-password:invalid {
+#confirm-password:invalid {
     background-color: rgba(251, 69, 69, 0.353);
     border: 1px solid rgb(251, 69, 69);
     outline: solid 1px rgb(246, 9, 9);
