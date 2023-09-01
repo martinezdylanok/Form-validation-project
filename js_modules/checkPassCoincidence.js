@@ -6,10 +6,14 @@ const CHECK_PASS_COINCIDENCE = () => {
    const CONFIRM_PASSWORD_FIELD = document.getElementById("confirm-password");
    const CONFIRM_PASSWORD_VALUE = CONFIRM_PASSWORD_FIELD.value;
 
-   if (PASSWORD_VALUE === CONFIRM_PASSWORD_VALUE && CONFIRM_PASSWORD_VALUE !== "") {
-      CONFIRM_PASSWORD_FIELD.setCustomValidity("");
+   if (CONFIRM_PASSWORD_VALUE.trim() === "") {
+      CONFIRM_PASSWORD_FIELD.setCustomValidity("Confirm password cannot be empty");
    } else {
-      CONFIRM_PASSWORD_FIELD.setCustomValidity(CONSTRAINTS.password[2]);
+      if (PASSWORD_VALUE === CONFIRM_PASSWORD_VALUE && CONFIRM_PASSWORD_VALUE !== "") {
+         CONFIRM_PASSWORD_FIELD.setCustomValidity("");
+      } else {
+         CONFIRM_PASSWORD_FIELD.setCustomValidity(CONSTRAINTS.password[2]);
+      }
    }
 };
 
