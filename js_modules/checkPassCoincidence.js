@@ -8,11 +8,14 @@ const CHECK_PASS_COINCIDENCE = () => {
 
    if (CONFIRM_PASSWORD_VALUE.trim() === "") {
       CONFIRM_PASSWORD_FIELD.setCustomValidity("Confirm password cannot be empty");
+      return false;
    } else {
       if (PASSWORD_VALUE === CONFIRM_PASSWORD_VALUE && CONFIRM_PASSWORD_VALUE !== "") {
          CONFIRM_PASSWORD_FIELD.setCustomValidity("");
+         return true;
       } else {
          CONFIRM_PASSWORD_FIELD.setCustomValidity(CONSTRAINTS.password[2]);
+         return false;
       }
    }
 };

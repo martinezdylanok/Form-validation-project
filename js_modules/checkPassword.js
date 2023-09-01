@@ -6,12 +6,15 @@ const CHECK_PASSWORD = () => {
 
    if (PASSWORD_VALUE.trim() === "") {
       PASSWORD_FIELD.setCustomValidity("Password cannot be empty");
+      return false;
    } else {
       const CONSTRAINT = new RegExp(CONSTRAINTS.password[0]);
       if (CONSTRAINT.test(PASSWORD_VALUE)) {
          PASSWORD_FIELD.setCustomValidity("");
+         return true;
       } else {
          PASSWORD_FIELD.setCustomValidity(CONSTRAINTS.password[1]);
+         return false;
       }
    }
 };

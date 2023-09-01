@@ -6,12 +6,15 @@ const CHECK_ZIP = () => {
 
    if (ZIP_FIELD.value.trim() === "") {
       ZIP_FIELD.setCustomValidity("ZIP code cannot be empty");
+      return false;
    } else {
       const CONSTRAINT = new RegExp(CONSTRAINTS[COUNTRY][0]);
       if (CONSTRAINT.test(ZIP_FIELD.value)) {
          ZIP_FIELD.setCustomValidity("");
+         return true;
       } else {
          ZIP_FIELD.setCustomValidity(CONSTRAINTS[COUNTRY][1]);
+         return false;
       }
    }
 };

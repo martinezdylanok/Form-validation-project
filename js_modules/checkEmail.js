@@ -6,12 +6,15 @@ const CHECK_EMAIL = () => {
 
    if (EMAIL_VALUE.trim() === "") {
       EMAIL_FIELD.setCustomValidity("Email cannot be empty");
+      return false;
    } else {
       const CONSTRAINT = new RegExp(CONSTRAINTS.email[0]);
       if (CONSTRAINT.test(EMAIL_VALUE)) {
          EMAIL_FIELD.setCustomValidity("");
+         return true;
       } else {
          EMAIL_FIELD.setCustomValidity(CONSTRAINTS.email[1]);
+         return false;
       }
    }
 };
