@@ -34,8 +34,16 @@ form {
     align-items: center;
     top: 680px;
     left: 720px;
-    color: red;
     font-size: .9rem;
+}
+
+#submit-message.valid {
+    left: 830px;
+    color: rgb(11, 190, 14);
+}
+
+#submit-message.invalid {
+    color: red;
 }
 
 #zip-code:valid,
